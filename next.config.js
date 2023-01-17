@@ -4,8 +4,7 @@ const nextConfig = {
     appDir: true,
   },
   env: {
-    TWITTER_BEARER_TOKEN:
-      "AAAAAAAAAAAAAAAAAAAAAARJkAEAAAAABdakbtVR9hjuXgAeCE%2BDvY6HTls%3DTaXxbSCVuYstanQDeoXX9pSC8G6GP7SSZdkcmBlIAkXLrm5zF4",
+    TWITTER_BEARER_TOKEN: process.env.TWITTER_BEARER_TOKEN,
   },
 };
 
