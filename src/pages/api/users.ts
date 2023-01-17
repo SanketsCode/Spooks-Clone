@@ -20,7 +20,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<FollowersData>
 ) {
-     const client = new Client( bearer_token );
+     const client = new Client( 'AAAAAAAAAAAAAAAAAAAAAARJkAEAAAAABdakbtVR9hjuXgAeCE%2BDvY6HTls%3DTaXxbSCVuYstanQDeoXX9pSC8G6GP7SSZdkcmBlIAkXLrm5zF4' );
 
   const followers = (await client.users.usersIdFollowers("102"));
   
