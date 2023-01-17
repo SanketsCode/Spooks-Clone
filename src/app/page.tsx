@@ -14,9 +14,13 @@ export default async function Home(props: any) {
   };
 
   let newData: User[] = [];
-  const res = await fetch(`http://localhost:3000/api/users`);
-  const data = await res.json();
-  newData = data.data;
+  try {
+    const res = await fetch(`http://localhost:3000/api/users`);
+    const data = await res.json();
+    newData = data.data;
+  } catch (error) {
+    console.log(error);
+  }
   // const newData = [
   //   { name: "test", username: "testy", id: "1202u8347yywe7ry" },
   //   { name: "test", username: "testy", id: "1202u8347yywe7ry" },
