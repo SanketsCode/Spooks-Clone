@@ -1,6 +1,4 @@
 import Image from "next/image";
-import { Inter } from "@next/font/google";
-import styles from "./page.module.css";
 import Navbar from "@/components/Navbar";
 import Card from "@/components/card";
 // import Twitter from 'twitter';
@@ -16,13 +14,9 @@ export default async function Home(props: any) {
   };
 
   let newData: User[] = [];
-  try {
-    const res = await fetch(`http://localhost:3000/api/users`);
-    const data = await res.json();
-    newData = data.data;
-  } catch (error) {
-    console.log(error);
-  }
+  const res = await fetch(`http://localhost:3000/api/users`);
+  const data = await res.json();
+  newData = data.data;
   // const newData = [
   //   { name: "test", username: "testy", id: "1202u8347yywe7ry" },
   //   { name: "test", username: "testy", id: "1202u8347yywe7ry" },
@@ -49,7 +43,7 @@ export default async function Home(props: any) {
           />
         ))}
 
-      {!newData && (
+      {newData.length == 0 && (
         <h3 className="font-['Rowdies'] mt-10 text-[2rem] text-white text-center self-center">
           Too Many Request Please Check After Some time
         </h3>
