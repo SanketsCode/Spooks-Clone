@@ -41,6 +41,7 @@ export default async function Home(props: any) {
       {newData &&
         newData.map((user: User, i: number) => (
           <Card
+            key={user.id}
             name={user.name}
             username={user.username}
             id={user.id}
