@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 left-[50%] max-w-5xl w-full h-20 -translate-x-2/4 z-10 block p-4">
+    <nav className="top-0  w-full h-20  z-10 block p-4 items-center justify-center">
       <div className="flex items-center w-full opacity-90 h-full">
         <div className="h-auto block">
           <h1 className="font-['Rowdies'] text-[2rem] text-white">Spook</h1>
