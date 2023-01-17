@@ -14,7 +14,7 @@ type FollowersData = {
     data : User[] | undefined
 }
 
-const bearer_token : string | AuthClient = process.env.TWITTER_BEARER_TOKEN ? process.env.TWITTER_BEARER_TOKEN : ' ' ;
+const bearer_token : string | AuthClient = process.env.TWITTER_BEARER_TOKEN ? process.env.TWITTER_BEARER_TOKEN : '' ;
 
 export default async function handler(
   req: NextApiRequest,
