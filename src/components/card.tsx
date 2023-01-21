@@ -12,18 +12,18 @@ type User = {
     url: string;
     download_url: string;
   };
-  public_metrics: any;
+  followers: number | string | undefined;
+  following: number | string | undefined;
 };
 export default function Card({
   name,
   username,
   id,
   img,
-  public_metrics,
+  followers,
+  following,
 }: User) {
   // console.log(img.download_url);
-
-  const { followers_count, following_count } = public_metrics;
 
   return (
     <div className="w-[90%] bg-[#3d466d] h-auto p-4 m-10 rounded-lg flex items-center shadow-lg">
@@ -43,10 +43,10 @@ export default function Card({
 
         <div className="flex">
           <h3 className="bg-green-300  pl-[px] pr-[5px] h-6 ml-2 rounded-md w-auto">
-            Followers Count :{followers_count ? followers_count : 0}
+            Followers Count :{followers}
           </h3>
           <h3 className="bg-red-300 pl-[5px] pr-[5px] h-6 ml-2 rounded-md w-auto">
-            Following Count : {following_count ? following_count : 0}
+            Following Count : {following}
           </h3>
         </div>
 

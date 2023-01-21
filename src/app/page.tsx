@@ -11,7 +11,12 @@ export default async function Home(props: any) {
     name: string;
     username: string;
     id: string;
-    public_metrics: any;
+    public_metrics: {
+      followers_count: number | string | undefined;
+      following_count: number | string | undefined;
+      listed_count: number | string | undefined;
+      tweet_count: number | string | undefined;
+    };
   };
 
   let newData: User[] = [];
@@ -40,7 +45,16 @@ export default async function Home(props: any) {
             username={user.username}
             id={user.id}
             img={ImgData[i]}
-            public_metrics={user.public_metrics}
+            followers={
+              user.public_metrics.followers_count
+                ? user.public_metrics.followers_count
+                : 0
+            }
+            following={
+              user.public_metrics.following_count
+                ? user.public_metrics.following_count
+                : 0
+            }
           />
         ))}
 
