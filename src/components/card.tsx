@@ -12,8 +12,20 @@ type User = {
     url: string;
     download_url: string;
   };
+  public_metrics: {
+    followers_count: string;
+    following_count: string;
+    tweet_count: string;
+    listed_count: string;
+  };
 };
-export default function Card({ name, username, id, img }: User) {
+export default function Card({
+  name,
+  username,
+  id,
+  img,
+  public_metrics,
+}: User) {
   // console.log(img.download_url);
 
   return (
@@ -26,12 +38,21 @@ export default function Card({ name, username, id, img }: User) {
 
       <div className="flex-row ml-5">
         <div className="flex items-center">
-          <h1 className="m-3 text-2xl text-white">Name : {name}</h1>
+          <h1 className="m-3 text-xl text-white">Name : {name}</h1>
           <h3 className="bg-white pl-[3px] pr-[3px] h-6 ml-2 rounded-md w-auto">
             ID: {id}
           </h3>
         </div>
-        <h2 className="m-3 text-2xl text-white">Username : {username}</h2>
+        <div className="flex">
+          <h3 className="bg-green-300  pl-[5px] pr-[5px] h-6 ml-2 rounded-md w-auto">
+            Followers Count : {public_metrics.followers_count}
+          </h3>
+          <h3 className="bg-red-300 pl-[5px] pr-[5px] h-6 ml-2 rounded-md w-auto">
+            Following Count : {public_metrics.following_count}
+          </h3>
+        </div>
+
+        <h2 className="m-3 text-xl text-white">Username : {username}</h2>
       </div>
     </div>
   );

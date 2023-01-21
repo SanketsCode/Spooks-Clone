@@ -11,11 +11,17 @@ export default async function Home(props: any) {
     name: string;
     username: string;
     id: string;
+    public_metrics: {
+      followers_count: string;
+      following_count: string;
+      tweet_count: string;
+      listed_count: string;
+    };
   };
 
   let newData: User[] = [];
   try {
-    const res = await fetch(`http://localhost:3000/api/users`);
+    const res = await fetch(`${process.env.API_BASE_URL}/api/users`);
     const data = await res.json();
     newData = data.data;
   } catch (error) {
@@ -44,6 +50,7 @@ export default async function Home(props: any) {
             username={user.username}
             id={user.id}
             img={ImgData[i]}
+            public_metrics={user.public_metrics}
           />
         ))}
 

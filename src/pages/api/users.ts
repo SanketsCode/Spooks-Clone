@@ -22,7 +22,7 @@ export default async function handler(
 ) {
      const client = new Client( bearer_token );
 
-  const followers = (await client.users.usersIdFollowers("102"));
+  const followers = (await client.users.usersIdFollowers("102",{"user.fields": ["public_metrics"],expansions: ["pinned_tweet_id"],max_results: 10}));
   
   
   res.status(200).json({data:  followers.data});
