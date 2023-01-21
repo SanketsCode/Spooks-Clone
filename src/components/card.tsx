@@ -13,10 +13,10 @@ type User = {
     download_url: string;
   };
   public_metrics: {
-    followers_count: string | undefined;
-    following_count: string | undefined;
-    tweet_count: string | undefined;
-    listed_count: string | undefined;
+    followers_count: string | undefined | number;
+    following_count: string | undefined | number;
+    tweet_count: string | undefined | number;
+    listed_count: string | undefined | number;
   };
 };
 export default function Card({
@@ -44,20 +44,27 @@ export default function Card({
           </h3>
         </div>
 
-        <div className="flex">
-          <h3 className="bg-green-300  pl-[px] pr-[5px] h-6 ml-2 rounded-md w-auto">
-            Followers Count :
-            {public_metrics.followers_count
-              ? public_metrics.followers_count
-              : 0}
-          </h3>
-          <h3 className="bg-red-300 pl-[5px] pr-[5px] h-6 ml-2 rounded-md w-auto">
-            Following Count :
-            {public_metrics.following_count
-              ? public_metrics.following_count
-              : 0}
-          </h3>
-        </div>
+        {public_metrics.followers_count && public_metrics.following_count && (
+          <div className="flex">
+            <h3 className="bg-green-300  pl-[px] pr-[5px] h-6 ml-2 rounded-md w-auto">
+              Followers Count :{public_metrics.followers_count}
+            </h3>
+            <h3 className="bg-red-300 pl-[5px] pr-[5px] h-6 ml-2 rounded-md w-auto">
+              Following Count : {public_metrics.following_count}
+            </h3>
+          </div>
+        )}
+        {!public_metrics.followers_count ||
+          (!public_metrics.following_count && (
+            <div className="flex">
+              <h3 className="bg-green-300  pl-[px] pr-[5px] h-6 ml-2 rounded-md w-auto">
+                Followers Count :{public_metrics.followers_count}
+              </h3>
+              <h3 className="bg-red-300 pl-[5px] pr-[5px] h-6 ml-2 rounded-md w-auto">
+                Following Count : {public_metrics.following_count}
+              </h3>
+            </div>
+          ))}
         <h2 className="m-3 text-xl text-white">Username : {username}</h2>
       </div>
     </div>
