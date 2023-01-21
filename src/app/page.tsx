@@ -12,10 +12,10 @@ export default async function Home(props: any) {
     username: string;
     id: string;
     public_metrics: {
-      followers_count: number | string | undefined;
-      following_count: number | string | undefined;
-      listed_count: number | string | undefined;
-      tweet_count: number | string | undefined;
+      followers_count: number | string;
+      following_count: number | string;
+      listed_count: number | string;
+      tweet_count: number | string;
     };
   };
 
@@ -45,8 +45,8 @@ export default async function Home(props: any) {
             username={user.username}
             id={user.id}
             img={ImgData[i]}
-            followers={0}
-            following={0}
+            followers={+user.public_metrics.followers_count}
+            following={+user.public_metrics.following_count}
           />
         ))}
 

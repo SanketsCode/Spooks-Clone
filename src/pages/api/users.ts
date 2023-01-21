@@ -5,10 +5,10 @@ import { Client } from 'twitter-api-sdk';
 import { AuthClient } from 'twitter-api-sdk/dist/types';
 
 type public_metrics = { 
-  followers_count: number | string | undefined; 
-  following_count: number | string | undefined ; 
-  listed_count: number | string | undefined; 
-  tweet_count: number | string | undefined; 
+  followers_count: number | string ; 
+  following_count: number | string; 
+  listed_count: number | string; 
+  tweet_count: number | string; 
 } 
 type User = {
     name : string;
@@ -19,7 +19,7 @@ type User = {
 }
 
 type FollowersData = {
-    data : User[] | undefined | any
+    data : User[]| undefined | any 
 }
 
 const bearer_token : string | AuthClient = process.env.TWITTER_BEARER_TOKEN ? process.env.TWITTER_BEARER_TOKEN : '' ;
