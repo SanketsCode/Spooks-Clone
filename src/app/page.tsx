@@ -45,16 +45,8 @@ export default async function Home(props: any) {
             username={user.username}
             id={user.id}
             img={ImgData[i]}
-            followers={
-              user.public_metrics.followers_count
-                ? user.public_metrics.followers_count
-                : 0
-            }
-            following={
-              user.public_metrics.following_count
-                ? user.public_metrics.following_count
-                : 0
-            }
+            followers={0}
+            following={0}
           />
         ))}
 
