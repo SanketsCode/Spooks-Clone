@@ -12,10 +12,10 @@ export default async function Home(props: any) {
     username: string;
     id: string;
     public_metrics: {
-      followers_count: string;
-      following_count: string;
-      tweet_count: string;
-      listed_count: string;
+      followers_count: string | undefined;
+      following_count: string | undefined;
+      tweet_count: string | undefined;
+      listed_count: string | undefined;
     };
   };
 
@@ -27,11 +27,6 @@ export default async function Home(props: any) {
   } catch (error) {
     console.log(error);
   }
-  // const newData = [
-  //   { name: "test", username: "testy", id: "1202u8347yywe7ry" },
-  //   { name: "test", username: "testy", id: "1202u8347yywe7ry" },
-  //   { name: "test", username: "testy", id: "1202u8347yywe7ry" },
-  // ];
 
   return (
     <main className="max-w-4xl mx-auto my-auto">

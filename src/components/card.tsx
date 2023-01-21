@@ -13,10 +13,10 @@ type User = {
     download_url: string;
   };
   public_metrics: {
-    followers_count: string;
-    following_count: string;
-    tweet_count: string;
-    listed_count: string;
+    followers_count: string | undefined;
+    following_count: string | undefined;
+    tweet_count: string | undefined;
+    listed_count: string | undefined;
   };
 };
 export default function Card({
@@ -44,7 +44,7 @@ export default function Card({
           </h3>
         </div>
         <div className="flex">
-          <h3 className="bg-green-300  pl-[5px] pr-[5px] h-6 ml-2 rounded-md w-auto">
+          <h3 className="bg-green-300  pl-[px] pr-[5px] h-6 ml-2 rounded-md w-auto">
             Followers Count : {public_metrics.followers_count}
           </h3>
           <h3 className="bg-red-300 pl-[5px] pr-[5px] h-6 ml-2 rounded-md w-auto">
