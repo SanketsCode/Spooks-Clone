@@ -43,15 +43,21 @@ export default function Card({
             ID: {id}
           </h3>
         </div>
+
         <div className="flex">
           <h3 className="bg-green-300  pl-[px] pr-[5px] h-6 ml-2 rounded-md w-auto">
-            Followers Count : {public_metrics.followers_count}
+            Followers Count :
+            {public_metrics.followers_count
+              ? public_metrics.followers_count
+              : 0}
           </h3>
           <h3 className="bg-red-300 pl-[5px] pr-[5px] h-6 ml-2 rounded-md w-auto">
-            Following Count : {public_metrics.following_count}
+            Following Count :
+            {public_metrics.following_count
+              ? public_metrics.following_count
+              : 0}
           </h3>
         </div>
-
         <h2 className="m-3 text-xl text-white">Username : {username}</h2>
       </div>
     </div>
