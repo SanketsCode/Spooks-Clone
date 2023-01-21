@@ -4,17 +4,17 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import { Client } from 'twitter-api-sdk';
 import { AuthClient } from 'twitter-api-sdk/dist/types';
 
-type public_metrics = { 
-  followers_count: number; 
-  following_count: number; 
-  listed_count: number; 
-  tweet_count: number; 
-} 
+// type public_metrics = { 
+//   followers_count: number; 
+//   following_count: number; 
+//   listed_count: number; 
+//   tweet_count: number; 
+// } 
 type User = {
-    name : string,
-    id: string,
-    username : string,
-    data:[public_metrics]
+    name : string;
+    id: string;
+    username : string;
+    data:[any];
 
 }
 

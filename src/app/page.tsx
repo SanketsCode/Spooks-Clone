@@ -11,12 +11,7 @@ export default async function Home(props: any) {
     name: string;
     username: string;
     id: string;
-    public_metrics: {
-      followers_count: string | undefined;
-      following_count: string | undefined;
-      tweet_count: string | undefined;
-      listed_count: string | undefined;
-    };
+    public_metrics: any;
   };
 
   let newData: User[] = [];
