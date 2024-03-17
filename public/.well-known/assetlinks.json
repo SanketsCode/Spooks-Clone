@@ -3,11 +3,10 @@
     "relation": ["delegate_permission/common.handle_all_urls"],
     "target": {
       "namespace": "android_app",
-      "package_name": "com.deeplinkingproject",
+      "package_name": "com.deeplinking",
       "sha256_cert_fingerprints": [
-        "DD:D6:AA:D3:11:F4:9B:13:AA:41:80:74:F6:EC:A2:F9:3D:92:E8:C2:DE:BF:13:29:0A:D3:85:65:23:3B:73:35",
         "FA:C6:17:45:DC:09:03:78:6F:B9:ED:E6:2A:96:2B:39:9F:73:48:F0:BB:6F:89:9B:83:32:66:75:91:03:3B:9C",
-        "34:90:7A:C4:AC:F3:3E:B8:88:38:33:9D:94:1A:D0:A0:D3:68:F1:BF:07:74:7A:0D:EE:FA:D4:9B:27:28:31:AA"
+        "D9:30:96:C9:31:8D:94:A2:AC:C0:9B:33:9B:D7:46:0D:1D:CE:45:48:C5:D0:8B:4F:0A:3E:D4:8A:C3:0E:1B:DC"
       ]
     }
   }
