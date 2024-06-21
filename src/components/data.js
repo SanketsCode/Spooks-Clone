@@ -11,23 +11,23 @@ import benefitOneImg from "../../public/img/benefit-one.png";
 import benefitTwoImg from "../../public/img/benefit-two.png";
 
 const benefitOne = {
-  title: "Highlight your benefits",
-  desc: "You can use this space to highlight your first benefit or a feature of your product. It can also contain an image or Illustration like in the example along with some bullet points.",
+  title: "Our Products",
+  desc: "We offer a diverse range of digital marketing products to cater to your business needs:",
   image: benefitOneImg,
   bullets: [
     {
-      title: "Understand your customers",
-      desc: "Then explain the first point breifly in one or two lines.",
+      title: "Digital Marketing",
+      desc: "Comprehensive strategies to enhance your online presence and drive traffic.",
       icon: <FaceSmileIcon />,
     },
     {
-      title: "Improve acquisition",
-      desc: "Here you can add the next benefit point.",
+      title: "Social Media Optimization",
+      desc: "Maximize your reach and engagement on major social media platforms.",
       icon: <ChartBarSquareIcon />,
     },
     {
-      title: "Drive customer retention",
-      desc: "This will be your last bullet point in this section.",
+      title: "Google Business Listing",
+      desc: "Improve your local visibility and attract more customers through optimized Google listings.",
       icon: <CursorArrowRaysIcon />,
     },
   ],
@@ -35,26 +35,25 @@ const benefitOne = {
 
 const benefitTwo = {
   title: "Offer more benefits here",
-  desc: "You can use this same layout with a flip image to highlight your rest of the benefits of your product. It can also contain an image or Illustration as above section along with some bullet points.",
+  desc: "We offer a diverse range of digital marketing products to cater to your business needs",
   image: benefitTwoImg,
   bullets: [
     {
-      title: "Mobile Responsive Template",
-      desc: "Nextly is designed as a mobile first responsive template.",
+      title: "Digital Business Card with Auto SMS App",
+      desc: "Modernize your networking with digital business cards and automated SMS.",
       icon: <DevicePhoneMobileIcon />,
     },
     {
-      title: "Powered by Next.js & TailwindCSS",
-      desc: "This template is powered by latest technologies and tools.",
+      title: "Content Marketing",
+      desc: "Craft compelling content that attracts and retains your target audience.",
       icon: <AdjustmentsHorizontalIcon />,
     },
     {
-      title: "Dark & Light Mode",
-      desc: "Nextly comes with a zero-config light & dark mode. ",
+      title: "NFC Google Review Card",
+      desc: "Simplify the review process and boost your online reputation with NFC-enabled cards.",
       icon: <SunIcon />,
     },
   ],
 };
 
-
-export {benefitOne, benefitTwo};
+export { benefitOne, benefitTwo };

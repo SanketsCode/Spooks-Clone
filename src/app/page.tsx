@@ -12,13 +12,11 @@ export default function Home() {
   return (
     <Container>
       <Hero />
-      <SectionTitle
-        preTitle="Nextly Benefits"
-        title=" Why should you use this landing page"
-      >
-        Nextly is a free landing page & marketing website template for startups
-        and indie projects. Its built with Next.js & TailwindCSS. And its
-        completely open-source.
+      <SectionTitle preTitle="Introduction" title="At SPARCK ADVERTISING">
+        we are dedicated to helping businesses thrive in the digital world. Our
+        team of experienced professionals leverages the latest trends and
+        technologies to deliver exceptional results. Our commitment is to exceed
+        your expectations and drive your success
       </SectionTitle>
 
       <Benefits data={benefitOne} />
@@ -35,12 +33,9 @@ export default function Home() {
 
       <Video videoId="fZ0D0cnR88E" />
 
-      <SectionTitle
-        preTitle="Testimonials"
-        title="Here's what our customers said"
-      >
-        Testimonials is a great way to increase the brand trust and awareness.
-        Use this section to highlight your popular customers.
+      <SectionTitle preTitle="Portfolio" title="Here's what our customers said">
+        Here is our Project Details which we are offering for multiple
+        businesses and more feature that will help you to reach more audience
       </SectionTitle>
 
       <Testimonials />
