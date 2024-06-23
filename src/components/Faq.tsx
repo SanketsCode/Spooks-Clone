@@ -1,7 +1,11 @@
 "use client";
 import React from "react";
 import { Container } from "@/components/Container";
-import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
+import {
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+} from "@headlessui/react";
 import { ChevronUpIcon } from "@heroicons/react/24/solid";
 
 export const Faq = () => {
@@ -32,25 +36,27 @@ export const Faq = () => {
       </div>
     </Container>
   );
-}
+};
 
 const faqdata = [
   {
-    question: "Is this template completely free to use?",
-    answer: "Yes, this template is completely free to use.",
-  },
-  {
-    question: "Can I use it in a commercial project?",
-    answer: "Yes, this you can.",
-  },
-  {
-    question: "What is your refund policy? ",
+    question: "What is Our Vision?",
     answer:
-      "If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
+      "To be the premier digital marketing agency recognized for our innovative products and superior client service.",
   },
   {
-    question: "Do you offer technical support? ",
+    question: "What is Our Mission?",
     answer:
-      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
+      "To empower businesses by providing comprehensive digital solutions that drive growth and enhance online presence.",
+  },
+  {
+    question: "Wanna Know About Bulk SMS? ",
+    answer:
+      "Reach your audience instantly with cost-effective bulk SMS campaigns.",
+  },
+  {
+    question: "Bulk WhatsApp? ",
+    answer:
+      "Engage with your customers directly through bulk WhatsApp messaging.",
   },
 ];
